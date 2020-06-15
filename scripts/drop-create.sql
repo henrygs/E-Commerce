@@ -24,5 +24,15 @@ CREATE TABLE TB_FORNECEDOR (
 	primary key(CD_FORNECEDOR)
 );
 
+USE DB_ECOMMERCE;
+
+CREATE TABLE TB_CLIENTE (
+	CD_CLIENTE INT NOT NULL auto_increment,
+    NM_CLIENTE VARCHAR(255) NOT NULL,
+    DS_EMAIL VARCHAR(255) NOT NULL,
+    PC_DESCONTO DOUBLE NOT NULL,
+    DS_CPF VARCHAR(255) NOT NULL,
+    PRIMARY key(CD_CLIENTE)
+);
 --insert into tb_fornecedor values (1, 'amazon', 'amazon@brasil.com', 'amazon do brazil', '123456789');
 --SELECT * FROM db_ecommerce.tb_fornecedor;

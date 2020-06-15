@@ -10,15 +10,22 @@ import java.util.List;
 import br.com.systemECommerce.model.domain.Fornecedor;
 
 public class FornecedorDao {
+	
 	public List<Fornecedor> getFornecedores() throws SQLException,ClassNotFoundException {
 		Connection conexao = ConexaoJDBCFactory.getConexao();
+		
 		PreparedStatement ps = conexao.prepareStatement("SELECT CD_FORNECEDOR,NM_FORNECEDOR,"
 				+ "DS_RAZAO_SOCIAL,DS_EMAIL,DS_CNPJ FROM TB_FORNECEDOR");
+		
 		ResultSet rs = ps.executeQuery();
 		List<Fornecedor> fornecedores = new ArrayList<>();
 		while(rs.next()) {
-			fornecedores.add(new Fornecedor(rs.getInt(1),rs.getString(4),
-					rs.getString(2),rs.getString(3),rs.getString(5)));
+			fornecedores.add(new Fornecedor(
+					rs.getInt(1),
+					rs.getString(4),
+					rs.getString(2),
+					rs.getString(3),
+					rs.getString(5)));
 		}
 		return fornecedores;
 	}

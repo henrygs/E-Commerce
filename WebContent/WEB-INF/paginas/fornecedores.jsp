@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#A901DB">
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#380B61">
 		<div class="container">
 			<a class="navbar-brand h1" href="#">E-commerce</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
@@ -21,16 +21,16 @@
 	  		<div class="collapse navbar-collapse" id="navbarSite">
 	  			<ul class="navbar-nav">
 	  				<li class="nav-item">
-	  					<a class="nav-link" href="#">Início</a>
+	  					<a class="nav-link" href="index">Início</a>
 	  				</li>
 	  				<li class="nav-item">
-	  					<a class="nav-link" href="#">Fornecedores</a>
+	  					<a class="nav-link" href="fornecedorServlet">Fornecedores</a>
 	  				</li>
 	  				<li class="nav-item">
-	  					<a class="nav-link" href="#">Clientes</a>
+	  					<a class="nav-link" href="ClienteServlet">Clientes</a>
 	  				</li>
 	  				<li class="nav-item">
-	  					<a class="nav-link" href="#">Produtos</a>
+	  					<a class="nav-link" href="ProdutoServlet">Produtos</a>
 	  				</li>
 	  			</ul>
 	  			<div class="navbar-nav ml-auto">
@@ -45,7 +45,7 @@
 	</nav>
 	
 	<div class="container-fluid boder ">
-		<div class="row form-ecommerce justify-content-center h3 mb-3" style="background-color:#BF00FF">
+		<div class="row form-ecommerce justify-content-center h3 mb-3" style="background-color:#4B088A">
 			<h1 class="h3 font-weight-normal text-light">Cadastro de Fornecedores</h1>	
 		</div>
 	</div>
@@ -77,7 +77,7 @@
 					<input type="text" name="email" class="form-control" placeholder="Digite E-Mail" required="required" autofocus="autofocus" value="${fornecedor.email}"/>
 				</div>
 				<br>
-				<input type="submit" value="Enviar" />
+				<input class="btn btn-info" type="submit" value="Enviar" />
 				<br>
 				<br>
 			</form>
@@ -88,7 +88,7 @@
 	</div>
 	<div class="container">
 		<table class="table table-hover">
-			<thead style="background-color:#A901DB" >
+			<thead style="background-color:#380B61" >
 			<tr >
 				<th class="text-light font-weight-normal">CODIGO</th>
 				<th class="text-light font-weight-normal">NOME FANTASIA</th>			
