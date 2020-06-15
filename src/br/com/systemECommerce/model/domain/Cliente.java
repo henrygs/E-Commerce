@@ -3,41 +3,43 @@ package br.com.systemECommerce.model.domain;
 import util.ValidacaoException;
 
 public class Cliente extends Pessoa {
-	private Double porcentagemDesconto;
+private Double percentualDesconto;
+	
 	private String cpf;
-
-	public Cliente(Integer codigo, String email, String nome, Double porcentagemDesconto, String cpf) {
+	
+	public Cliente(Integer codigo, String email, String nome, Double percentualDesconto, String cpf) {
 		super(codigo, email, nome);
-		if(porcentagemDesconto == null) {
-			this.porcentagemDesconto = 0d;
-		}else {
-			this.porcentagemDesconto = porcentagemDesconto;
-		}
-		
+		if (percentualDesconto == null) {
+			this.percentualDesconto = 0d;
+		} else {
+			this.percentualDesconto = percentualDesconto;	
+		}		
 		this.cpf = cpf;
 	}
 	
 	public Cliente() {
-		this.porcentagemDesconto = 0d;
+		this.percentualDesconto = 0d;
 	}
-	
-	public void valida() throws ValidacaoException{
+
+	public void valida() throws ValidacaoException {
 		super.valida();
-		if(cpf == null || cpf.equals("")) {
-			throw new ValidacaoException("O campo CPF é obrigado!");
+		if (cpf == null || cpf.equals("")) {
+			throw new ValidacaoException("O campo cpf eh obrigatorio");
 		}
 	}
-	
-	
-	public Double getPorcentagemDesconto() {
-		return porcentagemDesconto;
+
+	public Double getPercentualDesconto() {
+		return percentualDesconto;
 	}
-	public void setPorcentagemDesconto(Double porcentagemDesconto) {
-		this.porcentagemDesconto = porcentagemDesconto;
+
+	public void setPercentualDesconto(Double percentualDesconto) {
+		this.percentualDesconto = percentualDesconto;
 	}
+
 	public String getCpf() {
 		return cpf;
 	}
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
